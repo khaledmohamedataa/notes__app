@@ -36,7 +36,7 @@ class NoteItem extends StatelessWidget {
               ListTile(
                 title: Text(
                   note.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 26,
                   ),
@@ -55,7 +55,9 @@ class NoteItem extends StatelessWidget {
                   ),
                 ),
                 trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.trash,
                     color: Colors.black,
