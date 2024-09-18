@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
-import 'package:notes_app/widgets/custom_note_item.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
 
 class EditNoteViewBody extends StatefulWidget {
@@ -19,10 +18,10 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           CustomAppBar(
@@ -36,7 +35,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             title: 'Edit Note',
             icon: Icons.check,
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomTextField(
@@ -44,7 +43,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                 title = value;
               },
               title: widget.note.title),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           CustomTextField(
